@@ -1,0 +1,30 @@
+'e'
+"earth"
+'t'
+"treasure"
+'w'
+"tree/wood";
+'s'
+"stable platform"
+'b'
+"blade"
+'p'
+"poi"
+'f'
+"fire"
+'u'
+"unstable platform"
+'m'                        ///to ye radif yeki
+"moveable platform"
+'r'                        ///to ye radif yeki
+"river"
+'1'
+"todei"
+'2'
+"todei"
+'3'
+"todei"
+'4'
+"todei"
+'n'
+"nothing"

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+<asset>
+<contributor>
+<author>VoxelShop User</author>
+<authoring_tool>VoxelShop V1.7.01</authoring_tool>
+</contributor>
+<created>2016-08-14T14:08:40</created>
+<modified>2016-08-14T14:08:40</modified>
+<unit meter="1" name="meter"/>
+<up_axis>Z_UP</up_axis>
+</asset>
+<library_images>
+<image id="komod_door_texture0-image" name="komod_door_texture0-image">
+<init_from>file://komod_door_texture0.png</init_from>
+</image>
+</library_images>
+<library_effects>
+<effect id="lambert0-fx">
+<profile_COMMON>
+<newparam sid="komod_door_texture0-surface">
+<surface type="2D">
+<init_from>komod_door_texture0-image</init_from>
+</surface>
+</newparam>
+<newparam sid="komod_door_texture0-sampler">
+<sampler2D>
+<source>komod_door_texture0-surface</source>
+<wrap_s>WRAP</wrap_s>
+<wrap_t>WRAP</wrap_t>
+<minfilter>NEAREST</minfilter>
+<magfilter>NEAREST</magfilter>
+</sampler2D>
+</newparam>
+<technique sid="common">
+<lambert>
+<emission>
+<color>0 0 0 1</color>
+</emission>
+<ambient>
+<color>0 0 0 1</color>
+</ambient>
+<diffuse>
+<texture texcoord="TEX0" texture="komod_door_texture0-sampler"/>
+</diffuse>
+</lambert>
+</technique>
+</profile_COMMON>
+</effect>
+</library_effects>
+<library_materials>
+<material id="lambert0-material" name="lambert0">
+<instance_effect url="#lambert0-fx"/>
+</material>
+</library_materials>
+<library_geometries>
+<geometry id="Plane-tex-mesh-0" name="Plane-tex">
+<mesh>
+<source id="Plane-tex-mesh-0-positions">
+<float_array count="48" id="Plane-tex-mesh-0-positions-array">-9 -3 47 -9 -1 -1 -9 -3 -1 -9 -1 47 3 -1 23 3 1 21 3 -1 21 3 1 23 9 -3 47 9 -1 -1 9 -3 -1 9 -1 47 5 -1 23 5 1 21 5 -1 21 5 1 23</float_array>
+<technique_common>
+<accessor count="16" source="#Plane-tex-mesh-0-positions-array" stride="3">
+<param name="X" type="float"/>
+<param name="Y" type="float"/>
+<param name="Z" type="float"/>
+</accessor>
+</technique_common>
+</source>
+<source id="Plane-tex-mesh-0-uvs">
+<float_array count="114" id="Plane-tex-mesh-0-uvs-array">0.50010103 0.6667845 0.57137805 0.83309764 0.57137805 0.6667845 0.5000505 0.66690236 0.5000505 0.8332155 0.57132757 0.8332155 0.07152959 0.16678452 0.14280663 0.33309764 0.14280663 0.16678452 0.07147908 0.16690236 0.07147908 0.33321548 0.14275613 0.33321548 0.2858153 0.33345118 0.35709235 0.4997643 0.35709235 0.33345118 0.28576478 0.33356905 0.28576478 0.49988216 0.35704184 0.49988216 0.23459472 0.6667866 0.14290673 0.8330934 0.14290673 0.6667866 0.2346443 0.6669066 0.2346443 0.8332134 0.1429563 0.8332134 0.22312216 0.66679406 0.14290321 0.83307856 0.14290321 0.66679406 0.22316822 0.66692144 0.22316822 0.83320594 0.14294927 0.83320594 0.2858504 0.6594709 0.9285034 0.8332321 0.9285034 0.6594709 0.9284128 0.65007466 0.28584123 0.65007466 0.5000317 0.833184 0.24987459 0.6669788 0.17859651 0.83317727 0.14295746 0.83317727 0.5713188 0.6669121 0.5000549 0.8193377 0.5000549 0.8331946 0.14291959 0.8193635 0.2855894 0.66685283 0.14291959 0.8332281 0.57138896 0.6668053 0.5000792 0.75 0.57138896 0.8331947 0.28566378 0.6667845 0.28566378 0.8332155 0.14295816 0.75 0.14292388 0.8332226 0.19641523 0.6668881 0.2231609 0.8332226 0.14295746 0.66682273 0.17859651 0.66682273 0.24987459 0.8330212</float_array>
+<technique_common>
+<accessor count="57" source="#Plane-tex-mesh-0-uvs-array" stride="2">
+<param name="S" type="float"/>
+<param name="T" type="float"/>
+</accessor>
+</technique_common>
+</source>
+<vertices id="Plane-tex-mesh-0-vertices">
+<input semantic="POSITION" source="#Plane-tex-mesh-0-positions"/>
+</vertices>
+<polylist count="28" material="lambert0-material">
+<input offset="0" semantic="VERTEX" source="#Plane-tex-mesh-0-vertices"/>
+<input offset="1" semantic="TEXCOORD" set="0" source="#Plane-tex-mesh-0-uvs"/>
+<vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</vcount>
+<p>0 0 1 1 2 2 0 3 3 4 1 5 4 6 5 7 6 8 4 9 7 10 5 11 9 13 8 12 10 14 11 16 8 15 9 17 13 7 12 6 14 8 15 10 12 9 13 11 1 19 10 18 2 20 9 22 10 21 1 23 5 7 14 6 6 8 13 10 14 9 5 11 12 6 7 7 4 8 12 9 15 10 7 11 8 24 3 25 0 26 8 27 11 28 3 29 10 30 0 31 2 32 10 27 8 28 0 29 7 7 13 6 5 8 15 10 13 9 7 11 9 34 1 33 6 35 14 37 9 36 6 38 6 40 1 39 4 41 9 43 14 42 12 44 4 46 1 45 3 47 11 49 9 48 12 50 4 52 3 51 11 53 12 55 4 54 11 56</p>
+</polylist>
+</mesh>
+</geometry>
+</library_geometries>
+<library_visual_scenes>
+<visual_scene id="Scene" name="Scene">
+<node id="komod_door.komod_door" name="komod_door.komod_door" type="NODE">
+<translate sid="location">0 0 0</translate>
+<rotate sid="rotationZ">0 0 1 0</rotate>
+<rotate sid="rotationY">0 1 0 0</rotate>
+<rotate sid="rotationX">1 0 0 0</rotate>
+<scale sid="scale">0.05 0.05 0.05</scale>
+<instance_geometry name="komod_door" sid="komod_door" url="#Plane-tex-mesh-0">
+<bind_material>
+<technique_common>
+<instance_material symbol="lambert0-material" target="#lambert0-material">
+<bind_vertex_input input_semantic="TEXCOORD" input_set="0" semantic="TEX0"/>
+</instance_material>
+</technique_common>
+</bind_material>
+</instance_geometry>
+</node>
+</visual_scene>
+</library_visual_scenes>
+<scene>
+<instance_visual_scene url="#Scene"/>
+</scene>
+</COLLADA>
